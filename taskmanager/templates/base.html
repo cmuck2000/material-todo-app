@@ -23,6 +23,7 @@
     />
     <title>Task Manager</title>
   </head>
+
   <body>
     <header>
       <!-- top navbar -->
@@ -35,7 +36,7 @@
           <ul class="right hide-on-med-and-down">
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="">New Task</a></li>
-            <li><a href="">Categories</a></li>
+            <li><a href="{{ url_for('categories') }}">Categories</a></li>
           </ul>
         </div>
       </nav>
@@ -44,11 +45,12 @@
       <ul class="sidenav" id="mobile-demo">
         <li><a href="{{ url_for('home') }}">Home</a></li>
         <li><a href="">New Task</a></li>
-        <li><a href="">Categories</a></li>
+        <li><a href="{{ url_for('categories') }}">Categories</a></li>
       </ul>
     </header>
 
     <main class="container">{% block content %} {% endblock %}</main>
+
     <footer class="page-footer blue darken-3">
       <div class="footer-copyright">
         <div class="container">
@@ -62,6 +64,7 @@
         </div>
       </div>
     </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>
